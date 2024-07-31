@@ -2,7 +2,7 @@
 name: Imgproxy
 slug: imgproxy
 description: Imgproxy Add-on for Home Assistant
-url: "https://github.com/landonr/home-assistant-imgproxy"
+url: "https://github.com/jbcurran/home-assistant-imgproxy/"
 arch:
   - armhf
   - armv7
