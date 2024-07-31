@@ -12,11 +12,6 @@ arch:
 init: false
 map:
   - share:rw
-options:
-  signature_key: "your_signature_key"
-  host-port: "host-port"
-schema:
-  signature_key: "str?"
 ports:
   8080/tcp: 8080
 version: latest
