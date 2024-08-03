@@ -1,6 +1,5 @@
 # Info about the add-on
 name: Imgproxy
-version: "1.0.0"
 slug: imgproxy
 description: Imgproxy Add-on for Home Assistant
 arch:
@@ -27,6 +26,7 @@ map:
 # Docker configuration
 ports:
   8080/tcp: 8080
+version: latest
 image: "darthsim/imgproxy"
 privileged: []
 environment:
