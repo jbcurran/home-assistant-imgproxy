@@ -28,14 +28,14 @@ map:
 ports:
   8080/tcp: 8080
 image: "darthsim/imgproxy"
-privileged: false
+privileged: []
 environment:
-  - IMGPROXY_LOG_LEVEL=info
-  - IMGPROXY_MAX_SRC_RESOLUTION=3840x2160
-  - IMGPROXY_MAX_SRC_FILE_SIZE=20MB
-  - IMGPROXY_ENABLE_DEBUG=true  # Optional: Enable debug mode for troubleshooting
-  - IMGPROXY_PRESERVE_HEADERS=true
-  - IMGPROXY_ALLOWED_SOURCES="http://192.168.1.231:8123"  # Allow Home Assistant as a source
+  IMGPROXY_LOG_LEVEL: "info"
+  IMGPROXY_MAX_SRC_RESOLUTION: "3840x2160"
+  IMGPROXY_MAX_SRC_FILE_SIZE: "20MB"
+  IMGPROXY_ENABLE_DEBUG: "true"  # Values should be strings
+  IMGPROXY_PRESERVE_HEADERS: "true"
+  IMGPROXY_ALLOWED_SOURCES: "http://192.168.1.231:8123"
 
 # Add-on metadata
 ingress: false
