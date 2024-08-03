@@ -35,8 +35,7 @@ environment:
   - IMGPROXY_MAX_SRC_FILE_SIZE=20MB
   - IMGPROXY_ENABLE_DEBUG=true  # Optional: Enable debug mode for troubleshooting
   - IMGPROXY_PRESERVE_HEADERS=true
-  - IMGPROXY_ALLOWED_SOURCES=http://192.168.1.231:8123  # Allow Home Assistant as a source
-  - IMGPROXY_BASE_URL=http://192.168.1.231:8080  # Base URL for Imgproxy
+  - IMGPROXY_ALLOWED_SOURCES="http://192.168.1.231:8123"  # Allow Home Assistant as a source
 
 # Add-on metadata
 ingress: false
