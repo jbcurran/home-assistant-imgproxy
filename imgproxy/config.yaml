@@ -10,6 +10,7 @@ arch:
   - amd64
   - i386
 init: false
+boot: auto
 map:
   - share:rw
 schema:
