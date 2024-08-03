@@ -1,34 +1,23 @@
-# Info about the add-on
+# Add-on for Imgproxy
 name: Imgproxy
 slug: imgproxy
 description: Imgproxy Add-on for Home Assistant
+url: "https://github.com/jbcurran/home-assistant-imgproxy"
 arch:
-  - "armhf"
-  - "armv7"
-  - "aarch64"
-  - "amd64"
-  - "i386"
-startup: "services"
-boot: "auto"
-host_network: true
-homeassistant_api: true
-options: {}
-schema: {}
-
-# Map specific folders or files
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
 map:
-  config: ro
-  ssl: ro
-  addons: ro
-  backup: ro
-  share: rw
-
-# Docker configuration
+  - share:rw
+schema:
+  signature_key: "str?"
 ports:
   8080/tcp: 8080
 version: latest
 image: "darthsim/imgproxy"
-privileged: []
 environment:
   IMGPROXY_LOG_LEVEL: "info"
   IMGPROXY_MAX_SRC_RESOLUTION: "3840x2160"
@@ -37,13 +26,5 @@ environment:
   IMGPROXY_PRESERVE_HEADERS: "true"
   IMGPROXY_ALLOWED_SOURCES: "http://192.168.1.231:8123"
 
-# Add-on metadata
-ingress: false
-ingress_port: 8099
-webui: http://[HOST]:[PORT:8080]/
-host_ipc: false
-host_dbus: false
 
-# Additional settings
-apparmor: true
 
